@@ -1,0 +1,25 @@
+access-list access-list-number {permit | deny } {source [source-wildcard] | host hostname | any }
+
+access-list access-list-number {permit | deny } protocol source source-wildcard destination destination-wildcard
+
+100 through 199 and 2000 to 2699 
+
+access-list 100 deny ip any 10.1.10.0 0.0.0.255 
+access-list 100 deny ip any 10.1.20.0 0.0.0.255 
+access-list 100 deny ip any 10.1.30.0 0.0.0.255 
+access-list 100 permit ip 10.1.200.0 0.0.0.255 host 10.1.200.1 
+access-list 100 deny ip any 10.1.200.0 0.0.0.255 	
+access-list 100 permit ip any any 	
+
+int vlan 10 
+ip access-group 100 in 	
+
+int vlan 20 
+ip access-group 100 in 	
+
+int vlan 30 
+ip access-group 100 in 	
+
+int vlan 200
+ip access-group 100 in 
+	

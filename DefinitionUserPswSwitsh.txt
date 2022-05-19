@@ -1,0 +1,10 @@
+aaa new-model
+aaa authentication login default local 
+aaa authentication enable default enable 
+
+username admin password isetsf
+enable secret isetsf
+
+line vty 0 4 
+logging synchronous 
+login authentication default 
